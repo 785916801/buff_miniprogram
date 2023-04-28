@@ -1,0 +1,13 @@
+<view class="item">
+    <block class="buff_item" wx:for="{{items}}" wx:key="id">
+        <view class="item">
+        <image class="image" src="{{item.goods_info.original_icon_url}}"        mode="widthFix"/>
+        <view class="title">{{item.name}}</view>
+        
+        <text>求购{{item.buy_max_price}}</text>
+        <text>售价{{item.sell_min_price}}</text>
+        <text>当前在售{{item.sell_num}}</text>
+        <text>steam价格{{steamInfo(item.market_hash_name)}}</text>
+        </view>
+    </block>
+</view>

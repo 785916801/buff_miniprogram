@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        items:[]
     },
 
     /**
@@ -24,36 +24,16 @@ Page({
             },
             method:'GET',
             success(res){
-                console.log(res.data)
                 _this.setData({
                     items:res.data.data.items
                 })
             }
         })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-        const sHash = currentTarget.dataset.items.market_hash_name
-            wx.request({
-                url: 'https://steamcommunity.com/market/priceoverview/',
-                data: {
-                  appid: 730,
-                  market_hash_name:sHash,
-                  currency: 23
-                },
-                header: {
-                  'content-type': 'application/json'
-                },
-                success(res) {
-                  console.log(res.data)
-                },
-                fail(err) {
-                  console.log(err)
-                }
-              })
     },
     /**
      * 生命周期函数--监听页面显示

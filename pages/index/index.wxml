@@ -5,9 +5,12 @@
         <view class="title">{{item.name}}</view>
         
         <text>求购{{item.buy_max_price}}</text>
+        <text> - </text>
         <text>售价{{item.sell_min_price}}</text>
+        <text> - </text>
         <text>当前在售{{item.sell_num}}</text>
-        <text>steam价格{{steamInfo(item.market_hash_name)}}</text>
+        <text> - </text>
+        <text>steam价格{{item.goods_info.steam_price_cny}}</text>
         </view>
     </block>
 </view>

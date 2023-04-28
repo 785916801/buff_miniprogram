@@ -17,7 +17,7 @@ Page({
             url:'https://buff.163.com/api/market/goods',
             data:{
                 game:"csgo",
-                page_size:"20"
+                page_size:"80"
             },
             header:{
                 'content-type': 'application/x-www-form-urlencoded'
